@@ -15,10 +15,10 @@ author: Sawyer Huang
 
 navbar-links:
   About Me: "aboutme"
-  Projects:
-    - Critically Endangered Species: "https://github.com/sawhuang/INFO2950/tree/main/Final%20Project"
-    - Fracking and Water Contamination: "https://github.com/sawhuang/ORIE4741"
-    - Predicting Presidential Data: "https://github.com/sawhuang/CS4780"
+  Projects: "projects"
+  Links:
+    - GitHub: "https://github.com/sawhuang"
+    - LinkedIn: "https://www.linkedin.com/in/sawyerhuang/"
 
 # --- Logo --- #
 
