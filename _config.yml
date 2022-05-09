@@ -17,7 +17,7 @@ navbar-links:
   About Me: "aboutme"
   Projects: "projects"
   Links:
-    - Resume: "resume.pdf"
+    - Resume: "resume"
     - GitHub: "https://github.com/sawhuang"
     - LinkedIn: "https://www.linkedin.com/in/sawyerhuang/"
 
