@@ -16,8 +16,8 @@ author: Sawyer Huang
 navbar-links:
   About Me: "aboutme"
   Projects: "projects"
-  Resume: "/Sawyer Huang Resume Spring 22.pdf"
   Links:
+    - Resume: "/Sawyer Huang Resume Spring 22.pdf"
     - GitHub: "https://github.com/sawhuang"
     - LinkedIn: "https://www.linkedin.com/in/sawyerhuang/"
 
