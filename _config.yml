@@ -17,6 +17,7 @@ navbar-links:
   About Me: "aboutme"
   Projects: "projects"
   Links:
+    - Resume: "https://github.com/sawhuang/sawhuang.github.io/blob/master/resume.pdf"
     - GitHub: "https://github.com/sawhuang"
     - LinkedIn: "https://www.linkedin.com/in/sawyerhuang/"
 
@@ -88,7 +89,7 @@ share-links-active:
 url-pretty: "sawhuang.github.io/"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
-excerpt_length: 0
+excerpt_length: 50
 
 # Whether or not to show an excerpt for every blog post in the feed page
 feed_show_excerpt: false
@@ -231,7 +232,7 @@ kramdown:
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
-#  -
+  -
     scope:
       path: ""
       type: "posts"
