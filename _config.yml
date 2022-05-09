@@ -16,15 +16,15 @@ author: Sawyer Huang
 navbar-links:
   About Me: "aboutme"
   Projects:
-    - Analyzing Trends in IUCN Critically Endangered Species: "https://github.com/sawhuang/INFO2950/tree/main/Final%20Project"
-    - The Association of Fracking with Water Contamination: "https://github.com/sawhuang/ORIE4741"
+    - Critically Endangered Species: "https://github.com/sawhuang/INFO2950/tree/main/Final%20Project"
+    - Fracking and Water Contamination: "https://github.com/sawhuang/ORIE4741"
     - Predicting Presidential Data: "https://github.com/sawhuang/CS4780"
 
 # --- Logo --- #
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon.png"
+avatar: "/assets/img/sawyer-icon.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
