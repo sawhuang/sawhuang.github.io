@@ -9,7 +9,7 @@ I have project experience in data science, analytics, and visualization. Below i
 ___
 
 ### [Analyzing Trends in IUCN Critically Endangered Species](https://github.com/sawhuang/INFO2950/tree/main/Final%20Project)
-In this project, I worked with a partner on analyzing trends in IUCN Critically Endangered Species. We used exploratory data analysis to visualize statistically significant trends and better understand the common traits associated with critically endangered animals
+In this project, I worked with a partner on analyzing trends in IUCN Critically Endangered Species. We used exploratory data analysis to visualize statistically significant trends and better understand the common traits associated with critically endangered animals.
 
 ___
 
@@ -19,4 +19,4 @@ I worked with a small group to analyze the relationship between the level of wat
 ___
 
 ### [Predicting Election Data](https://github.com/sawhuang/CS4780)
-This project was a Kaggle competition that used voting demographic data from the 2016 election to see who could best predict the votes of other voters from the 2016 election. Our team used feature engineering to analyze new features and built out various models to maximize our prediction accuracy. Our best models were an SVM and a neural network that brought our team to score in the top 10 teams out of over 400 participants.
+This project was a Kaggle competition that used voting demographic data from the 2016 election to see who could best predict the votes of other voters from the 2016 election. Our team used feature engineering to analyze new features and built out various models to maximize our prediction accuracy. Our best models were an SVM and a neural network that allowed our team to score in the top 10 teams out of over 400 participants.
