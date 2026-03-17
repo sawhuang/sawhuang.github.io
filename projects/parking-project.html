@@ -26,29 +26,107 @@
     <div class="card">
       <h1>Parking Analytics Infrastructure</h1>
       <p>
-        Built an automated parking data pipeline and KPI system using camera-based monitoring data.
+        Built a real-time parking analytics pipeline and leadership dashboarding system to track
+        garage flow, utilization, and event-day vehicle movement at scale.
       </p>
 
-      <img src="../images/parking-project.jpg" alt="Parking analytics screenshot" class="project-page-image" />
+      <img src="../images/parking-project.jpeg" alt="Parking analytics dashboard and garage flow visualization" class="project-page-image" />
+
+      <h2>Project Snapshot</h2>
+      <ul>
+        <li><strong>Context:</strong> Live event operations / parking analytics</li>
+        <li><strong>Scale:</strong> 4,500+ parking bays across 6 floors and 24 zones</li>
+        <li><strong>Infrastructure:</strong> 20+ entrances and exits, with cameras at each entrance, exit, and parking bay</li>
+        <li><strong>Volume:</strong> 4,000+ cars per event across roughly 100 events per year</li>
+        <li><strong>Stack:</strong> Python, APIs, SQL, Jenkins, GitHub, Power BI</li>
+      </ul>
 
       <h2>Overview</h2>
       <p>
-        This project connected data from garage entry, parking bay usage, and exit events into a full vehicle lifecycle.
+        This project started with a new parking structure equipped with camera-based monitoring at
+        every entrance, exit, and parking bay. I helped build the data infrastructure needed to turn
+        those raw camera events into something operationally useful.
       </p>
 
-      <h2>Technical Work</h2>
+      <p>
+        The core challenge was not just collecting the data, but stitching together a full vehicle
+        journey: when a car entered the structure, where it parked, when it left its spot, and when
+        it ultimately exited the building. That required automated ingestion, cleaning, entity matching,
+        and transformation logic that could support both historical analysis and live dashboards.
+      </p>
+
+      <h2>What I Built</h2>
       <ul>
-        <li>API extraction and Python transformation</li>
-        <li>SQL storage and Jenkins scheduling</li>
-        <li>License plate matching logic</li>
-        <li>Power BI dashboards for leadership</li>
+        <li>Automated ingestion of parking camera data through external APIs</li>
+        <li>Database loading workflows for high-volume event-day parking data</li>
+        <li>Python transformation logic to clean and standardize camera event streams</li>
+        <li>License plate-based joins to connect entry, parking bay, stall departure, and garage exit events</li>
+        <li>A daily scheduled pipeline in GitHub/Jenkins to refresh the joined vehicle-lifecycle table</li>
+        <li>Power BI reporting for leadership and parking operations teams</li>
       </ul>
 
-      <h2>Impact</h2>
+      <h2>Technical Approach</h2>
       <p>
-        Created new KPIs such as average time to park, average time to exit, garage emptying time,
-        and parking utilization patterns.
+        Each event generated a constant stream of records from multiple camera sources. I worked on
+        ingesting those feeds through APIs and loading them into our database quickly enough to support
+        live operational reporting. From there, I transformed the data into a cleaner event-level table
+        by matching camera records using license plate information.
       </p>
+
+      <p>
+        That join logic made it possible to reconstruct a vehicle lifecycle across disconnected systems:
+        entry into the structure, parking activity within a bay, departure from the bay, and final exit.
+        I then saved that transformed table and automated the refresh process so it could run daily through
+        Jenkins using scripts stored in GitHub.
+      </p>
+
+      <h2>Dashboards & KPIs</h2>
+      <p>
+        On top of the pipeline, I built Power BI dashboards that gave leadership visibility into parking
+        operations in a way they had never had before. Instead of just seeing counts, they could monitor
+        flow, speed, utilization, and post-event clearing behavior.
+      </p>
+
+      <ul>
+        <li>Average time to park during an event</li>
+        <li>Average time to leave after an event</li>
+        <li>Total time to empty the garage</li>
+        <li>Total bays used</li>
+        <li>Total cars per event</li>
+        <li>Utilization patterns by floor and zone</li>
+        <li>Ingress and egress timing trends</li>
+      </ul>
+
+      <h2>Business Impact</h2>
+      <p>
+        The biggest impact of the project was that it created a new foundation for operational decision-making.
+        The parking team could now use live and historical data to better understand how traffic moved through
+        the structure and where bottlenecks emerged.
+      </p>
+
+      <p>
+        That also opened the door to experimentation and A/B testing. For example, we could start testing
+        different traffic flow patterns by event type, vary which entrances and exits were used, and route
+        vehicles differently depending on projected attendance, expected vehicle volume, and the number of
+        parking zones we wanted to activate. In other words, the project shifted parking from reactive
+        management to a more measurable and optimizable operation.
+      </p>
+
+      <h2>Why This Project Matters</h2>
+      <p>
+        This project is a good example of the type of work I enjoy most: taking messy, high-volume operational
+        data and turning it into something reliable, scalable, and decision-ready. It combined engineering,
+        analytics, and business understanding in one workflow — from APIs and automation to KPI design and
+        real-time reporting.
+      </p>
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Built infrastructure that connected raw camera events into a usable vehicle lifecycle dataset</li>
+        <li>Automated ingestion and transformation pipelines for ongoing reporting</li>
+        <li>Delivered live dashboards that improved visibility for parking operations and leadership</li>
+        <li>Enabled future testing and optimization of ingress/egress strategies at event scale</li>
+      </ul>
     </div>
   </main>
 

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendance Forecasting | Sawyer Huang</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="site-title">
+        <a href="../index.html">Sawyer Huang</a>
+      </div>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+        </div>
+        <button class="toggle-btn" id="theme-toggle">Dark Mode</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="card">
+      <h1>Anaheim Ducks Attendance Predictions</h1>
+      <p>
+        Machine learning forecasting project completed at OC Sports &amp; Entertainment,
+        focused on predicting game-level attendance for Anaheim Ducks home games in order
+        to improve operational planning, staffing, and marketing effectiveness.
+      </p>
+
+      <img src="../images/ducks-attendance.jpeg" alt="Anaheim Ducks attendance forecasting project" class="project-page-image" />
+
+      <h2>Project Snapshot</h2>
+      <ul>
+        <li><strong>Organization:</strong> OC Sports &amp; Entertainment</li>
+        <li><strong>Context:</strong> Sports analytics / ticket demand forecasting</li>
+        <li><strong>Dataset:</strong> 4 seasons of historical ticketing and game-level data</li>
+        <li><strong>Scale:</strong> 41 home games per season, 12,000+ average attendance</li>
+        <li><strong>Capacity:</strong> ~16,000 seats</li>
+        <li><strong>Problem Type:</strong> Regression / attendance forecasting</li>
+        <li><strong>Target:</strong> Total attendance as a percentage of arena capacity</li>
+        <li><strong>Models:</strong> XGBoost, Random Forest, ARIMA, LSTM, Elastic Net, KNN</li>
+        <li><strong>Tools:</strong> Python, pandas, scikit-learn, XGBoost, time series modeling</li>
+      </ul>
+
+      <h2>Overview</h2>
+      <p>
+        This project was designed to help forecast demand for Anaheim Ducks home games at the
+        game level. The broader goal was to give business and operations teams better visibility
+        into expected attendance ahead of each event so they could make more informed decisions
+        around staffing, promotions, and fan engagement strategy.
+      </p>
+
+      <p>
+        To build the system, I aggregated and cleaned large-scale historical ticketing data from
+        the previous four seasons and combined it with a wide set of contextual features that
+        influence fan demand. These included opponent, day of week, season timing, promotions,
+        weather, holiday effects, schedule density, team performance, giveaways, tickets sold,
+        and historical purchasing behavior.
+      </p>
+
+      <h2>What I Worked On</h2>
+      <ul>
+        <li>Aggregated and cleaned multi-season historical ticketing data</li>
+        <li>Built game-level features capturing timing, promotions, and contextual demand drivers</li>
+        <li>Engineered variables to represent temporal trends and fan purchasing behavior</li>
+        <li>Trained and compared multiple forecasting and machine learning models</li>
+        <li>Evaluated model stability and predictive accuracy across game contexts</li>
+        <li>Integrated forecasts into internal analytics workflows and dashboards</li>
+      </ul>
+
+      <h2>Technical Approach</h2>
+      <p>
+        The project began with assembling a structured game-level modeling dataset from several
+        seasons of historical records. Because demand was shaped by both business and behavioral
+        factors, the modeling pipeline emphasized careful preprocessing and feature engineering
+        rather than relying only on model complexity.
+      </p>
+
+      <p>
+        The feature engineering process included:
+      </p>
+
+      <ul>
+        <li>Temporal features such as month, season timing, and day-of-week patterns</li>
+        <li>Opponent and matchup context</li>
+        <li>Promotion and giveaway indicators</li>
+        <li>Weather and holiday effects</li>
+        <li>Schedule density and rest-related variables</li>
+        <li>Team performance and momentum signals</li>
+        <li>Historical fan purchasing behavior and demand trend features</li>
+      </ul>
+
+      <p>
+        I trained and evaluated several candidate models, including XGBoost, Random Forest,
+        ARIMA, LSTM, Elastic Net, and KNN. After comparing predictive performance and consistency,
+        XGBoost was selected as the final model because it provided the best balance of accuracy,
+        robustness, and stability across different attendance scenarios.
+      </p>
+
+      <h2>Results</h2>
+      <p>
+        The final XGBoost model predicted total attendance as a percentage of arena capacity with
+        approximately <strong>2.7% mean absolute error</strong>, meaning forecasts were typically within
+        a few percentage points of actual attendance.
+      </p>
+
+      <p>
+        That level of accuracy made the model useful in practice, especially for identifying how
+        attendance expectations changed across different game contexts such as weekend matchups,
+        promotional nights, holidays, and periods of stronger or weaker team performance.
+      </p>
+
+      <h2>Business Impact</h2>
+      <p>
+        The forecasting outputs were integrated into internal analytics workflows and dashboards,
+        allowing teams to plan earlier and make more informed decisions. These forecasts helped
+        support operational preparation, improve staffing alignment, optimize promotional timing,
+        and strengthen targeting strategies by highlighting variability in expected fan demand.
+      </p>
+
+      <p>
+        More broadly, the project demonstrated how predictive modeling can create value in a sports
+        business setting by connecting historical fan behavior with forward-looking decisions that
+        affect both the game-day experience and commercial performance.
+      </p>
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>High-quality feature engineering was essential for capturing attendance demand signals</li>
+        <li>XGBoost outperformed a diverse set of statistical, ML, and deep learning models</li>
+        <li>Game attendance is driven by a mix of temporal, behavioral, and promotional factors</li>
+        <li>Forecasting models can directly improve planning, staffing, and marketing strategy in live sports environments</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer">© 2026 Sawyer Huang</footer>
+  <script src="../js/script.js"></script>
+</body>
+</html>

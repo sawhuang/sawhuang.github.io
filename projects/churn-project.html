@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Season Ticket Churn Prediction | Sawyer Huang</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="site-title">
+        <a href="../index.html">Sawyer Huang</a>
+      </div>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+        </div>
+        <button class="toggle-btn" id="theme-toggle">Dark Mode</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="card">
+      <h1>Season Ticket Churn Prediction &amp; Client Health Modeling</h1>
+      <p>
+        Predictive analytics project completed at OC Sports &amp; Entertainment, focused on
+        identifying season ticket members at risk of dropping out rather than renewing their plan,
+        with the goal of improving retention strategy, sales prioritization, and fan engagement.
+      </p>
+
+      <img src="../images/ducks-churn.jpeg" alt="Season ticket churn prediction project" class="project-page-image" />
+
+      <h2>Project Snapshot</h2>
+      <ul>
+        <li><strong>Organization:</strong> OC Sports &amp; Entertainment</li>
+        <li><strong>Context:</strong> Sports analytics / CRM / customer retention modeling</li>
+        <li><strong>Population:</strong> ~2,000 season ticket plan holders</li>
+        <li><strong>Dataset:</strong> Large-scale CRM and ticketing engagement data</li>
+        <li><strong>Problem Type:</strong> Supervised classification / churn risk scoring</li>
+        <li><strong>Target:</strong> Probability that a fan would stop purchasing within a future time window</li>
+        <li><strong>Model Family:</strong> Tree-based classification models</li>
+        <li><strong>Tools:</strong> Python, pandas, scikit-learn, CRM analytics workflows</li>
+      </ul>
+
+      <h2>Overview</h2>
+      <p>
+        This project was built to help business and sales teams identify season ticket members
+        who were at risk of churn before the renewal window. Rather than waiting until a fan
+        failed to renew, the goal was to surface leading indicators of disengagement early enough
+        for teams to take action through more personalized and proactive outreach.
+      </p>
+
+      <p>
+        I developed a churn prediction model using CRM, ticketing, and engagement data, then
+        extended that work into a broader client health model that could run consistently
+        throughout the season. This allowed sales reps and marketers to monitor fan health over
+        time, prioritize outreach, and better understand which behaviors signaled elevated churn risk.
+      </p>
+
+      <h2>What I Worked On</h2>
+      <ul>
+        <li>Prepared and modeled large-scale CRM and ticketing data for season ticket members</li>
+        <li>Engineered behavioral features tied to engagement, attendance, and purchase activity</li>
+        <li>Built supervised classification models to estimate churn probability</li>
+        <li>Evaluated multiple modeling approaches and selected tree-based methods</li>
+        <li>Calibrated model outputs to support reliable downstream probability-based decisions</li>
+        <li>Reframed the churn model into an always-on client health monitoring workflow</li>
+        <li>Integrated scores into internal analytics processes for sales and retention teams</li>
+      </ul>
+
+      <h2>Technical Approach</h2>
+      <p>
+        The project began with extensive feature engineering on a large CRM dataset covering
+        approximately 2,000 season ticket plan holders. The objective was to capture not only
+        who had churned historically, but which ongoing behaviors served as early warning signs
+        of future churn.
+      </p>
+
+      <p>
+        I built features representing:
+      </p>
+
+      <ul>
+        <li>Purchase frequency and recency of transactions</li>
+        <li>Ticket type segmentation and plan-related behavior</li>
+        <li>Historical attendance patterns</li>
+        <li>Customer demographic attributes</li>
+        <li>Ticket forwarding behavior</li>
+        <li>Email engagement and communication responsiveness</li>
+        <li>Event participation and other fan interaction signals</li>
+      </ul>
+
+      <p>
+        I framed the task as a supervised classification problem and trained models to predict
+        the probability that a fan would stop purchasing tickets within a defined future time
+        window. Multiple approaches were evaluated, with tree-based models ultimately selected
+        because they handled nonlinear relationships and feature interactions well across a
+        high-dimensional behavioral dataset.
+      </p>
+
+      <p>
+        Model evaluation emphasized practical business value rather than raw accuracy alone.
+        In particular, recall on the churn class was prioritized so that more at-risk fans could
+        be identified early, while still balancing the downside of false positives that could
+        waste sales and marketing effort. I also calibrated the model outputs so predicted risk
+        scores could be used more reliably in downstream targeting workflows.
+      </p>
+
+      <h2>From Churn Model to Client Health Model</h2>
+      <p>
+        One of the most valuable outcomes of the project was that it evolved beyond a one-time
+        churn prediction exercise. I converted the model into a client health framework that
+        could run throughout the season and continuously highlight accounts showing signs of
+        disengagement.
+      </p>
+
+      <p>
+        Fans with concerning patterns — such as not attending games, forwarding tickets,
+        missing events, not opening emails, or not responding to calls — could be flagged for
+        proactive outreach long before the renewal period. This turned the project into a more
+        actionable retention system rather than just a retrospective churn score.
+      </p>
+
+      <h2>Business Impact</h2>
+      <p>
+        The final model was integrated into internal analytics workflows and used by business
+        teams to segment users by churn risk and prioritize retention efforts. This enabled more
+        targeted campaigns, improved visibility into customer lifecycle dynamics, and gave sales
+        reps a more intelligent way to allocate their time and outreach.
+      </p>
+
+      <p>
+        The framework also created opportunities for experimentation. Because fans could be
+        segmented by modeled health and churn risk, the business could use the scores for
+        A/B testing, lift measurement, and ongoing optimization of personalized retention
+        strategies across a large and diverse fan base.
+      </p>
+
+      <h2>Why It Matters</h2>
+      <p>
+        In subscription-like sports products such as season ticket plans, retention is often
+        more valuable than acquisition alone. This project showed how machine learning can help
+        organizations move from reactive renewal efforts to proactive relationship management by
+        identifying disengagement patterns early and translating them into operational action.
+      </p>
+
+      <p>
+        More broadly, it demonstrated how predictive modeling can support CRM strategy by
+        combining transaction history, behavioral engagement, and communication signals into a
+        scalable system for monitoring customer health over time.
+      </p>
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Behavioral feature engineering was central to identifying meaningful churn risk signals</li>
+        <li>Tree-based models were well suited for nonlinear CRM and engagement data</li>
+        <li>Recall and probability calibration mattered more than headline accuracy alone</li>
+        <li>Turning churn prediction into a client health system made the model more actionable</li>
+        <li>Predictive retention tools can improve sales prioritization, outreach strategy, and long-term fan engagement</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer">© 2026 Sawyer Huang</footer>
+  <script src="../js/script.js"></script>
+</body>
+</html>

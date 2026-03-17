@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="site-title">
@@ -22,11 +24,19 @@
     </div>
   </nav>
 
+  <!-- MAIN -->
   <main class="container">
-    <section class="hero">
+
+    <!-- HERO -->
+    <section class="hero reveal">
       <div class="card">
+
         <h1>Sawyer Huang</h1>
-        <p class="subtitle">Data Scientist focused on machine learning, forecasting, analytics, and data products.</p>
+
+        <p class="subtitle">
+          Data Scientist focused on
+          <span id="rotating-text">machine learning</span>
+        </p>
 
         <p>
           I build practical data science solutions across forecasting, churn modeling,
@@ -34,16 +44,41 @@
           healthcare, and executive decision-making.
         </p>
 
+        <!-- STATS -->
+        <div class="stats-row">
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="6">0</span>
+            <span class="stat-label">Featured Projects</span>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="4">0</span>
+            <span class="stat-label">Industry Domains</span>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="3">0</span>
+            <span class="stat-label">Core Focus Areas</span>
+          </div>
+        </div>
+
         <div class="button-row">
           <a class="button" href="about.html">About Me</a>
         </div>
 
         <p>
           <strong>LinkedIn:</strong>
-          <a href="https://www.linkedin.com/in/sawyerhuang/" target="_blank">sawyerhuang</a>
+          <a href="https://www.linkedin.com/in/sawyerhuang/" target="_blank">
+            https://www.linkedin.com/in/sawyerhuang/
+          </a>
           <br />
+
           <strong>Email:</strong>
           <a href="mailto:smh367@cornell.edu">smh367@cornell.edu</a>
+          <br />
+
+          <strong>Resume:</strong>
+          <a href="resume/Sawyer_Huang_Resume.pdf" target="_blank" download>
+            Download PDF
+          </a>
         </p>
       </div>
 
@@ -52,10 +87,13 @@
       </div>
     </section>
 
-    <section>
+    <!-- EXPERIENCE -->
+    <section class="reveal">
       <h2 class="section-title">Featured Experience</h2>
+
       <div class="grid">
-        <div class="card info-card">
+
+        <div class="card info-card reveal">
           <h3>Forecasting</h3>
           <p>
             Built ticket demand and attendance forecasting models using XGBoost and related methods
@@ -63,7 +101,7 @@
           </p>
         </div>
 
-        <div class="card info-card">
+        <div class="card info-card reveal">
           <h3>Churn Modeling</h3>
           <p>
             Developed production churn models over large CRM data to improve retention targeting
@@ -71,56 +109,102 @@
           </p>
         </div>
 
-        <div class="card info-card">
+        <div class="card info-card reveal">
           <h3>Data Pipelines</h3>
           <p>
             Built automated retail and parking analytics pipelines using Python, SQL, APIs,
             Azure, Jenkins, and Power BI dashboards.
           </p>
         </div>
+
       </div>
     </section>
 
-    <section style="margin-top: 40px;">
+    <!-- PROJECTS -->
+    <section style="margin-top: 40px;" class="reveal">
       <h2 class="section-title">Featured Projects</h2>
+
       <div class="grid">
-        <a class="project-link-card" href="projects/mortgage-project.html">
+
+        <!-- Project 1 -->
+        <a class="project-link-card reveal tilt-card" href="projects/attendance-project.html">
           <div class="card project-card">
-            <img src="projects/mortgage-project.jpg" alt="Mortgage project screenshot" />
-            <h3>Mortgage Prediction</h3>
+            <img src="images/ducks-attendance.jpeg" alt="Attendance forecasting project screenshot" />
+            <h3>Ducks Attendance Prediction</h3>
+            <p>
+              Machine learning model predicting Anaheim Ducks game attendance to improve operations and marketing strategy.
+            </p>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a class="project-link-card reveal tilt-card" href="projects/sgb-project.html">
+          <div class="card project-card">
+            <img src="images/ducks-sgb.jpeg" alt="Single game project screenshot" />
+            <h3>Single Game Forecasting</h3>
+            <p>
+              Predictive model estimating Anaheim Ducks single game ticket buyers to support marketing, promotions, and revenue planning.
+            </p>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a class="project-link-card reveal tilt-card" href="projects/churn-project.html">
+          <div class="card project-card">
+            <img src="images/ducks-churn.jpeg" alt="Churn prediction project screenshot" />
+            <h3>Season Ticket Churn Model</h3>
+            <p>
+              Predictive model identifying at-risk season ticket members to improve retention, engagement, and sales outreach.
+            </p>
+          </div>
+        </a>
+
+        <!-- Project 4 -->
+        <a class="project-link-card reveal tilt-card" href="projects/mortgage-project.html">
+          <div class="card project-card">
+            <img src="images/deluxe-logo.svg" alt="Mortgage project screenshot" />
+            <h3>Targeted Mortgage Marketing</h3>
             <p>
               Graduate consulting-style project focused on predicting household mortgage likelihood using classification models.
             </p>
           </div>
         </a>
 
-        <a class="project-link-card" href="projects/parking-project.html">
+        <!-- Project 5 -->
+        <a class="project-link-card reveal tilt-card" href="projects/parking-project.html">
           <div class="card project-card">
-            <img src="projects/parking-project.jpg" alt="Parking analytics screenshot" />
-            <h3>Parking Analytics Infrastructure</h3>
+            <img src="images/parking-project.jpeg" alt="Parking analytics screenshot" />
+            <h3>Parking Analytics Engineering</h3>
             <p>
-              Built a parking data pipeline and operational KPI system to improve event visibility and garage performance.
+              Built a real-time parking analytics pipeline and live KPI dashboards to track vehicle flow,
+              utilization, and event-day ingress/egress across a 4,500+ bay garage.
             </p>
           </div>
         </a>
 
-        <a class="project-link-card" href="projects/trading-project.html">
+        <!-- Project 6 -->
+        <a class="project-link-card reveal tilt-card" href="projects/trading-project.html">
           <div class="card project-card">
-            <img src="projects/trading-project.jpg" alt="Trading bot screenshot" />
+            <img src="images/trading-project.png" alt="Trading bot screenshot" />
             <h3>Algorithmic Trading Bot</h3>
             <p>
               Personal project combining multi-source financial signals into an automated trading workflow.
             </p>
           </div>
         </a>
+
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     © 2026 Sawyer Huang
   </footer>
 
+  <!-- SCRIPT -->
   <script src="js/script.js"></script>
+
 </body>
 </html>

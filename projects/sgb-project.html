@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Single Game Buyer Forecasting | Sawyer Huang</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="site-title">
+        <a href="../index.html">Sawyer Huang</a>
+      </div>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+        </div>
+        <button class="toggle-btn" id="theme-toggle">Dark Mode</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="card">
+      <h1>Single Game Ticket Forecasting for Anaheim Ducks Games</h1>
+      <p>
+        Predictive modeling project completed at OC Sports &amp; Entertainment, focused on
+        estimating the number of single game ticket buyers for each Anaheim Ducks home game
+        to improve marketing strategy, promotional planning, and revenue forecasting.
+      </p>
+
+      <img src="../images/ducks-sgb.jpeg" alt="Single game buyer forecasting project" class="project-page-image" />
+
+      <h2>Project Snapshot</h2>
+      <ul>
+        <li><strong>Organization:</strong> OC Sports &amp; Entertainment</li>
+        <li><strong>Context:</strong> Sports analytics / ticket sales forecasting</li>
+        <li><strong>Dataset:</strong> 7 seasons of Anaheim Ducks home game sales data</li>
+        <li><strong>Scale:</strong> 287 games, each with 120 days of pregame sales activity</li>
+        <li><strong>Data Size:</strong> 34,000+ daily sales records with 60+ engineered features</li>
+        <li><strong>Problem Type:</strong> Supervised regression</li>
+        <li><strong>Target:</strong> Number of single game ticket buyers per home game</li>
+        <li><strong>Models:</strong> XGBoost, Random Forest, Elastic Net, KNN, LSTM, ARIMA</li>
+        <li><strong>Tools:</strong> Python, pandas, scikit-learn, XGBoost, time series validation</li>
+      </ul>
+
+      <h2>Overview</h2>
+      <p>
+        This project was built to forecast how many single game ticket buyers would ultimately
+        purchase for each Anaheim Ducks home game. In a sports business setting, that forecast
+        is highly valuable because single game buyers are one of the most responsive audience
+        segments for targeted marketing, promotions, and short-term ticket sales strategy.
+      </p>
+
+      <p>
+        To support that goal, I developed a predictive modeling pipeline that combined historical
+        ticketing behavior, game context, pricing, and daily sales ramp-up information. The final
+        system helped internal teams better anticipate demand variability across games and make
+        more informed decisions about campaign timing, promotional planning, and revenue expectations.
+      </p>
+
+      <h2>What I Worked On</h2>
+      <ul>
+        <li>Aggregated and cleaned large-scale multi-season ticketing data</li>
+        <li>Built a game-by-day dataset covering 120 days of sales leading up to each home game</li>
+        <li>Engineered 60+ features capturing buyer behavior, demand trends, and game context</li>
+        <li>Designed realistic forward-looking validation to avoid leakage</li>
+        <li>Simulated live backtesting across seasons using sequential training and prediction</li>
+        <li>Trained and compared multiple statistical, machine learning, and deep learning models</li>
+        <li>Integrated outputs into internal analytics workflows for stakeholder use</li>
+      </ul>
+
+      <h2>Technical Approach</h2>
+      <p>
+        The core challenge was that ticket demand evolves over time. For each game, there were
+        120 days of sales activity leading up to puck drop, so the model needed to learn not only
+        which games were likely to perform well, but also how buyer demand ramped up over time.
+        I structured the data to reflect that sequential sales process and created a modeling
+        dataset spanning 7 seasons, 287 home games, and more than 34,000 daily observations.
+      </p>
+
+      <p>
+        Feature engineering was central to the project. I built variables representing:
+      </p>
+
+      <ul>
+        <li>Purchase history and single game buyer behavior</li>
+        <li>Ticket type trends and differences between single game and non-single game buyers</li>
+        <li>Historical game demand and recent sales ramp-up patterns</li>
+        <li>Opponent strength and team rank context</li>
+        <li>Day-of-week, seasonality, and other timing effects</li>
+        <li>Promotional context and game-specific marketing factors</li>
+        <li>Primary market sales and secondary market sales signals</li>
+        <li>Ticket price levels and section-level capacity information</li>
+      </ul>
+
+      <p>
+        I evaluated several modeling approaches, including Random Forest, Elastic Net, KNN,
+        LSTM, and ARIMA. XGBoost was ultimately selected as the primary model because it
+        performed best on the tabular feature set, captured nonlinear demand relationships well,
+        trained much faster than LSTM-based alternatives, and was less prone to overfitting.
+      </p>
+
+      <p>
+        To make the evaluation realistic, I used simulated live backtesting across seasons,
+        training only on information that would have been available at the time of prediction.
+        This ensured the model reflected a true forward-looking deployment scenario rather than
+        benefiting from future leakage.
+      </p>
+
+      <h2>Results</h2>
+      <p>
+        The final model achieved approximately <strong>400 mean absolute error</strong> on an
+        average of roughly <strong>3,000 single game buyers per game</strong>, corresponding to
+        about <strong>13% relative error</strong>.
+      </p>
+
+      <p>
+        Given the variability of sports ticket demand across opponents, promotions, season timing,
+        and team performance, that level of accuracy was strong enough to make the model useful
+        for planning and business decision-making. It provided a more structured and data-driven
+        view of expected single game buyer demand well before each game date.
+      </p>
+
+      <h2>Why It Matters</h2>
+      <p>
+        This project translated ticketing data into actionable forecasting insights for business
+        stakeholders. By predicting the number of single game buyers in advance, the model helped
+        teams think more strategically about when to launch campaigns, how aggressively to market
+        specific games, and where demand variability was likely to create revenue opportunities
+        or risks.
+      </p>
+
+      <p>
+        The outputs were integrated into internal analytics workflows and supported decisions
+        around marketing timing, audience targeting, promotional planning, and broader ticket
+        sales strategy. More broadly, the project showed how predictive modeling can support
+        revenue operations in live sports by combining behavioral data, pricing signals, and
+        game context into a practical forecasting tool.
+      </p>
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Sequential sales data can be turned into a strong supervised forecasting problem with the right structure</li>
+        <li>Feature engineering around ramp-up trends, buyer behavior, and game context was critical to performance</li>
+        <li>XGBoost provided the best balance of predictive power, speed, and robustness</li>
+        <li>Realistic backtesting and leakage prevention were essential for trustworthy model evaluation</li>
+        <li>Forecasting single game buyers can directly improve marketing and ticket sales decision-making</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer">© 2026 Sawyer Huang</footer>
+  <script src="../js/script.js"></script>
+</body>
+</html>

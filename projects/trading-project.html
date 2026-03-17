@@ -26,28 +26,113 @@
     <div class="card">
       <h1>Algorithmic Trading Bot</h1>
       <p>
-        Personal project building an automated trading system using financial, behavioral, and alternative data signals.
+        Personal project building an automated portfolio selection and trading system using
+        technical, fundamental, sentiment, and alternative market signals.
       </p>
 
-      <img src="../images/trading-project.jpg" alt="Trading bot screenshot" class="project-page-image" />
+      <img src="../images/trading-project.png" alt="Trading bot screenshot" class="project-page-image" />
+
+      <h2>Project Snapshot</h2>
+      <ul>
+        <li><strong>Universe:</strong> S&amp;P 500 equities</li>
+        <li><strong>Dataset Size:</strong> 6+ million historical records</li>
+        <li><strong>Features:</strong> 30 engineered indicators</li>
+        <li><strong>Time Horizon:</strong> 10+ years of historical data</li>
+        <li><strong>Model:</strong> Random Forest ensemble</li>
+        <li><strong>Execution:</strong> Weekly automated portfolio rebalancing</li>
+        <li><strong>Performance:</strong> Sharpe Ratio ≈ 1.2 in backtesting</li>
+      </ul>
 
       <h2>Overview</h2>
       <p>
-        The project combines data from multiple APIs, builds predictive signals, and executes weekly trades automatically.
+        This project explores how multiple categories of financial data can be combined into an
+        automated portfolio selection system. The goal was to move beyond simple technical trading
+        strategies and instead build a data-driven process that integrates technical indicators,
+        fundamental company data, sentiment signals, and alternative datasets.
       </p>
 
-      <h2>Methods</h2>
+      <p>
+        The system collects and processes market data, generates predictive signals, evaluates
+        portfolio performance through historical backtesting, and automatically executes trades
+        through a brokerage API.
+      </p>
+
+      <h2>Data Pipeline</h2>
+      <p>
+        I built scripts to download historical market data for stocks in the S&amp;P 500 using
+        the yfinance API. Over a 10+ year window this produced a dataset with more than
+        <strong>6 million rows</strong> of historical observations including open, high, low,
+        close, and volume data.
+      </p>
+
+      <p>
+        I then expanded the dataset with additional external sources:
+      </p>
+
       <ul>
-        <li>Random Forest modeling</li>
-        <li>10+ years of historical backtesting</li>
-        <li>Sharpe-ratio-based optimization</li>
-        <li>Automated execution with Alpaca API</li>
+        <li><strong>Technical indicators:</strong> momentum, volatility, and trend signals</li>
+        <li><strong>Fundamental data:</strong> financial metrics from the Finnhub API</li>
+        <li><strong>Alternative data:</strong> congressional trades, lobbying activity, government contracts, and news sentiment from QuiverQuant</li>
       </ul>
+
+      <p>
+        After cleaning and joining the data sources, I engineered approximately
+        <strong>30 predictive features</strong> used for model training and portfolio selection.
+      </p>
+
+      <h2>Modeling Approach</h2>
+      <p>
+        I experimented with several modeling strategies before settling on a Random Forest model.
+        The final model uses an ensemble of indicators to rank stocks each week and construct a
+        portfolio of the most attractive trades.
+      </p>
+
+      <p>
+        Rather than optimizing purely for prediction accuracy, I evaluated strategies based on
+        portfolio-level metrics including alpha, beta, volatility, and Sharpe ratio.
+      </p>
+
+      <h2>Backtesting &amp; Simulation</h2>
+      <p>
+        The strategy was tested across more than a decade of historical data. I ran repeated
+        simulations of weekly trading to evaluate portfolio behavior, risk exposure, and
+        consistency over time.
+      </p>
+
+      <p>
+        I also visualized cumulative performance and drawdowns to ensure the strategy performed
+        consistently across different market conditions.
+      </p>
+
+      <h2>Automation &amp; Execution</h2>
+      <p>
+        Once the strategy was validated through backtesting, I connected the system to the
+        Alpaca trading API to automate execution. The workflow automatically selects the weekly
+        portfolio and rebalances positions using scheduled scripts.
+      </p>
+
+      <p>
+        Jobs are scheduled using Windows Task Scheduler, allowing the system to run
+        autonomously and execute trades on a weekly basis.
+      </p>
 
       <h2>Outcome</h2>
       <p>
-        The strategy achieved a Sharpe ratio greater than 1.0 in backtesting and is run through an automated weekly workflow.
+        The final strategy achieved a <strong>Sharpe ratio of approximately 1.2</strong> in
+        historical backtesting across the 10+ year dataset. More importantly, the project
+        demonstrated how diverse market signals can be integrated into a repeatable and
+        automated trading workflow.
       </p>
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Built a trading dataset with over <strong>6 million rows</strong> of historical market data</li>
+        <li>Engineered <strong>30 predictive features</strong> combining technical, fundamental, and alternative signals</li>
+        <li>Selected a Random Forest ensemble based on portfolio-level optimization metrics</li>
+        <li>Achieved a <strong>Sharpe ratio of ~1.2</strong> through 10+ years of backtesting</li>
+        <li>Automated portfolio rebalancing through Alpaca API and scheduled workflows</li>
+      </ul>
+
     </div>
   </main>
 

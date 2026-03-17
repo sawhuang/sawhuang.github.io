@@ -24,33 +24,102 @@
 
   <main class="container">
     <div class="card">
-      <h1>Mortgage Prediction</h1>
+      <h1>ML for Targeted Mortgage Marketing</h1>
       <p>
-        Graduate consulting-style project with Deluxe focused on estimating the probability
-        that a household would take out a mortgage.
+        Cornell M.Eng. consulting-style machine learning project completed with Deluxe,
+        focused on predicting the likelihood that a household would take out a home equity loan
+        in order to improve targeted marketing and customer acquisition strategy.
       </p>
 
-      <img src="../images/mortgage-project.jpg" alt="Mortgage project screenshot" class="project-page-image" />
+      <img src="../images/deluxe-logo.svg" alt="Mortgage project screenshot" class="project-page-image" />
+
+      <h2>Project Snapshot</h2>
+      <ul>
+        <li><strong>Partner:</strong> Deluxe</li>
+        <li><strong>Context:</strong> Financial services / targeted marketing analytics</li>
+        <li><strong>Dataset:</strong> 103,835 records and 898 input features</li>
+        <li><strong>Problem Type:</strong> Binary classification</li>
+        <li><strong>Models:</strong> Logistic Regression, XGBoost, LightGBM</li>
+        <li><strong>Tools:</strong> Python, scikit-learn, XGBoost, LightGBM</li>
+      </ul>
 
       <h2>Overview</h2>
       <p>
-        This project involved preparing large financial and demographic datasets, engineering features,
-        building classification models, and presenting insights to stakeholders.
+        This project was designed to simulate a real-world data science consulting engagement.
+        Working with a team of Cornell graduate students, I helped build an end-to-end modeling
+        pipeline to predict whether a customer would respond to a mortgage-related offer.
+        The broader business goal was to help improve marketing precision by identifying
+        higher-probability households more effectively.
       </p>
 
-      <h2>Methods</h2>
+      <p>
+        The dataset was high dimensional and messy, with extensive missing values, transformed
+        financial variables, class imbalance, and outliers. Because of that, the project was not
+        just about training a model — it was about building a thoughtful preprocessing and
+        feature engineering workflow that could improve both performance and explainability.
+      </p>
+
+      <h2>What I Worked On</h2>
       <ul>
-        <li>Data cleaning and preparation</li>
-        <li>Feature engineering across credit, income, and demographic indicators</li>
-        <li>Classification modeling</li>
-        <li>Accuracy and ROC-based evaluation</li>
+        <li>Prepared and modeled a large structured dataset with 100k+ observations</li>
+        <li>Handled missing values, outliers, scaling, and class imbalance</li>
+        <li>Built baseline and improved classification pipelines</li>
+        <li>Tested interpretable and tree-based models for comparison</li>
+        <li>Engineered transformed features to improve predictive signal</li>
+        <li>Presented findings in a final report and stakeholder-ready deliverables</li>
       </ul>
 
-      <h2>Outcome</h2>
+      <h2>Technical Approach</h2>
       <p>
-        The work simulated a real-world consulting engagement and focused on customer acquisition targeting
-        in financial services.
+        In Phase I, we established baseline models with relatively simple preprocessing. This included
+        dropping columns with more than 50% missingness, imputing remaining missing values,
+        scaling variables, and using SMOTE to address severe class imbalance.
       </p>
+
+      <p>
+        In Phase II, we built a more advanced feature engineering pipeline. That work included:
+      </p>
+
+      <ul>
+        <li>Iterative multivariate imputation instead of simple median/mode imputation</li>
+        <li>Outlier detection using IQR and creation of outlier indicator features</li>
+        <li>Missingness indicator features for added signal</li>
+        <li>Distribution-based transformations like Yeo-Johnson and quantile methods</li>
+        <li>Cubic spline feature generation</li>
+        <li>Discretization / binning of numeric variables</li>
+        <li>Sparse feature selection for more interpretable models</li>
+      </ul>
+
+      <h2>Results</h2>
+      <p>
+        One of the biggest project takeaways was that the enhanced feature engineering pipeline
+        meaningfully improved the sparse logistic regression model. Test accuracy improved from
+        <strong>91.28%</strong> in Phase I to <strong>94.95%</strong> in Phase II, while test AUROC improved
+        from <strong>0.9672</strong> to <strong>0.9826</strong>.
+      </p>
+
+      <p>
+        XGBoost performed strongly as a baseline model, reaching <strong>98.77%</strong> test accuracy
+        in Phase I. The project also surfaced which features were most influential, including home equity
+        activity, mortgage history, and engineered indicators derived from transaction behavior.
+      </p>
+
+      <h2>Why It Matters</h2>
+      <p>
+        Beyond model accuracy, this project was a strong example of how data science can support
+        business decision-making. The work connected data cleaning, feature engineering, modeling,
+        and interpretation in a way that mapped directly to a real customer acquisition use case.
+        It also reinforced an important lesson: in many applied ML problems, better preprocessing
+        and feature design can matter just as much as model choice.
+      </p>
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Advanced feature engineering substantially improved interpretable model performance</li>
+        <li>Missingness and outlier handling were central to model quality</li>
+        <li>Discretization and Yeo-Johnson transformations were especially useful in Phase II</li>
+        <li>Strong ML projects are not just about algorithms — they depend on careful data preparation and clear business framing</li>
+      </ul>
     </div>
   </main>
 
